@@ -107,7 +107,7 @@ else:
     models, scores, scaler = train_models(df)
     
     st.title("🤖 CalmAi Stress Prediction & Relief App")
-    st.write("CalmAi is a machine learning-powered stress prediction and relief assistant. We collect your heart beats and GSR readings to predict stress levels. Using multiple ML models, we provide a consensus stress level and personalized advice if high stress is detected. If stress is high, CalmAi offers tailored recommendations to help you relax and improve your mental well-being. Please enter your Sensor data below:")
+    st.write("CalmAi is a machine learning-powered stress prediction and relief assistant. Please do note that this is soley a wellness device that is not intended for medical use. We collect your heart beats and GSR readings to predict stress levels. Using multiple ML models, we provide a consensus stress level and personalized advice if high stress is detected. If stress is high, CalmAi offers tailored recommendations to help you relax and improve your mental well-being. Please enter your Sensor data below:")
 
     col1, col2 = st.columns(2)
     with col1:
@@ -156,4 +156,5 @@ else:
                 st.warning("⚖️ Consensus: Models are tied.")
 
         except ValueError:
+
             st.error("❌ Invalid Input: Please enter numbers only.")
